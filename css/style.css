@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap');
+*{	
+	margin:0;
+	padding:0;
+}
+body{
+	color:#444;
+	font-size:14px;
+	font-family: 'Ubuntu', sans-serif;
+	line-height:25px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Ubuntu', sans-serif;
+	font-weight:bold;
+}
+img{
+	max-width:100%;
+}
+/* Common CSS End */
+
+/* Start Header CSS */
+header{
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index:2;
+}
+.mainHeader{
+	background: rgb(17, 25, 61);
+	width:100%;
+	position:relative;
+}
+.topHeader {
+    border-top:1px solid #ddd;
+    font-size:12px;
+    color: #7f7f7f;
+    background: white;
+}
+.mainContent {
+    width: 1170px;
+    margin: auto;
+	padding:0px 15px;
+	display:table;
+}
+.addressBooks{
+	float:left;
+	width: 770px;
+}
+.addressBooks ul.addressItems{
+	list-style:none;
+}
+.addressBooks ul.addressItems li{
+	float:left;
+	padding: 12px;
+	border-right:1px solid #ddd;
+}
+.addressBooks ul.addressItems li a {
+	text-decoration:none;
+	color:#7f7f7f;
+	transition:1s;
+}
+.addressBooks ul.addressItems li a:hover{
+	color:orange;
+}
+.addressBooks ul.addressItems li:first-child{
+	border-left:1px solid #ddd;
+}
+.addressBooks ul.addressItems li:last-child{
+	border-right:1px solid #ddd;
+}
+.langChange{
+	width: 100px;
+	float:right;
+	border: 1px solid #ddd;
+	padding: 6px;
+}
+.langChange select{
+	border: none;
+	width:100%;
+	display:block;
+	padding:10px;
+	font-size:12px;
+	color: #7f7f7f;
+}
+.logo {
+    width:100px;
+    float:left;
+    margin-top: 31px;
+}
+.navbar {
+    width: 960px;
+    float:left;
+}
+.navbar ul {
+    list-style: none;
+    float: right;
+}
+.navbar ul li {
+    float: left;
+	position:relative;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 41.5px 14px;
+    font-size: 14px;
+    transition:1s;
+    -webkit-transition:1s;
+    -moz-transition:1s;
+    -op-transition:1s;
+}
+.navbar ul li a:hover{
+	color:orange;
+} 
+.navbar ul li span {
+    background: orange;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+	transition:0.3s;
+	transform:scaleX(0);
+	transform-origin:left;
+}
+.navbar ul li:hover span{
+	transform:scaleX(1);
+}
+.navbar ul li span:before {
+    border-right: 5px solid #ffffff00;
+    border-top: 5px solid orange;
+    position: absolute;
+    content: "";
+    top: -2.4px;
+    transform: rotate(45deg);
+    left: 50%;
+}
+.searchForm {
+    width:100px;
+    float:right;
+    display:grid;
+    place-items:center;
+    color:white;
+    padding: 43px 0px;
+    position: relative;
+}
+.searchForm i{
+	color:orange;
+}
+.searchBox {
+    background: white;
+    position: absolute;
+    top: 110px;
+    left: -170px;
+    overflow: hidden;
+    display: block;
+    width: 240px;
+    transform: scaleY(0);
+    transform-origin: top;
+	transition:0.5s;
+}
+.searchForm:hover .searchBox{
+	transform:scaleY(1);
+}
+.searchButton{
+	cursor:pointer;
+}
+input#searchInput {
+    float: left;
+}
+input#searchButton {
+    float: right;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.searchBox input {
+    padding: 15px;
+    border: none;
+}
+/*Dropdown Css*/
+.navbar ul ul.subMenu{
+	list-style:none;
+	position:absolute;
+	top: 110px;
+	left:0px;
+	background:#10203b;
+	width: 250px;
+	border-top: 3px solid transparent;
+	transition: 0.3s;
+	transform: scaleY(0);
+	transform-origin: top;
+}
+.navbar ul ul.subMenu li{
+	float:none;
+}
+.navbar ul ul.subMenu li a{
+	display:block;
+	padding: 6px 10px;
+}
+.navbar ul ul.subMenu li a:hover{
+	border:none;
+	color:orange;
+}
+.navbar ul li:hover ul.subMenu{
+	transform:scaleY(1);
+}
+/*Dropdown Css end*/
+/* End Header CSS */
+
+/*Start Slider CSS*/
+section#slider {
+    background: -webkit-linear-gradient(#414764a3,#18204e70),url(../images/slider.jpg);
+    background-repeat:no-repeat;
+    background-position: 100% 0%;
+    background-size:cover;
+    height: 750px;
+    position:relative;
+    z-index:1;
+}
+.sliderTitle {
+    width: 600px;
+    padding-top: 300px;
+}
+
+.sliderTitle h2 {
+    color: white;
+    font-size: 40px;
+}
+
+.sliderTitle span {
+    color: orange;
+}
+
+.sliderTitle p {
+    margin-top: 30px;
+    color:white;
+}
+.sliderButtons {
+    margin-top: 40px;
+}
+.sliderButtons #watchVideo{
+    background: #2a3051;
+    color: white;
+    padding: 20px 35px;
+    text-decoration: none;
+    margin-right: 15px;
+    transition:0.3s;
+    border: 2px solid #2a3051;
+}
+.sliderButtons #watchVideo:hover{
+	background:orange;
+	border-color:orange;
+}
+#buyNowTrasparent{
+	background:transparent;
+	padding: 20px 35px;
+	text-decoration: none;
+	margin-right: 15px;
+	border:2px solid #161d48;
+	color:white;
+}
+#buyNowTrasparent:hover{
+	background:orange;
+	border-color:orange;
+
+}
+.bouncBellWrapper {
+    position: relative;
+    margin-top: 230px;
+}
+.bouncBell {
+    width: 5px;
+    height: 15px;
+    background: #ffa500;
+    margin: auto;
+    border-radius: 30%;
+    cursor: pointer;
+}
+.bouncBellContainer{
+	margin:auto;
+	background:transparent;
+	height: 40px;
+	width: 25px;
+	display:grid;
+	place-items:center;
+	cursor:pointer;
+	border:1px solid white;
+	border-radius:30%;
+	animation-name:bellIcon;
+	animation-duration:1.3s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+}
+.bouncBellContainer:hover{
+	background:white;
+	overflow:hidden;
+	transform:translateY(46px);
+}
+.bouncBellContainer:hover .bouncBell{
+	background:black;
+}
+@keyframes bellIcon{
+	from{transform:translateY(0px)}
+	to{transform:translateY(45px)}
+}
+/* End Slider CSS */
+
+/* Start Services CSS */
+section{
+	padding:70px 0px;
+}
+.section_title h2 {
+    font-size: 35px;
+    color: #102244;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section_title {
+    padding: 20px 10px;
+}
+.section_title h2 span {
+    font-weight: 300;
+}
+.sec_title_inner {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #777;
+}
+/*Box Design Start*/
+.service_boxes {
+    overflow: hidden;
+    margin-top: 30px;
+}
+.service_box {
+    width: 325px;
+    float: left;
+    margin-left: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.service_box_inner {
+    padding: 10px;
+    background-color: #fffffd;
+    border: 1px solid #f6f2f2;
+    border-radius: 15px;
+}
+.box_icon {
+    width: 50px;
+    margin: auto;
+    margin-bottom: 10px;
+	transition:0.3s;
+}
+.box_title h3 {
+    color: #202542;
+    font-size: 20px;
+    margin-bottom: 10px;
+	transition:0.3s;
+}
+.box_title:hover{
+	cursor:pointer;
+}
+.service_box_inner:hover .box_icon{
+	transform:scale(1.2)
+}
+.service_box_inner:hover .box_title h3{
+	color:orange;
+}
+/*Box Design Stop*/
+/* End Services CSS */
+
+/*Start Goal */
+section#ourGoal{
+	background: linear-gradient(#282e52cc,#282e52cc),url(../images/bg-goal.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment:fixed;
+	color: white;
+}
+.goalTitle {
+    margin-bottom: 30px;
+}
+.goalTitle h2 {
+    font-size: 40px;
+}
+.goalTitle h2 span {
+    font-weight: 300;
+}
+.goalLeftContent {
+    line-height: 27px;
+    float: left;
+    width: 550px;
+}
+.goalLeftContent p {
+    margin-bottom: 30px;
+}
+.goalRightContent {
+    float: right;
+    width: 550px;
+}
+.goalOuterArea {
+    overflow: hidden;
+}
+.counterBox {
+    width: 250px;
+    overflow: hidden;
+    border: 2px solid white;
+    height: 112px;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font-size: 19px;
+    line-height: 35px;
+    margin: 10px;
+    transition: 0.5s;
+}
+.counterBox:hover {
+    cursor: pointer;
+    background: orange;
+    border-color: orange;
+}
+/*Stop Goal*/
+
+/*Start Footer*/
+.footerTop{
+	background: linear-gradient(#2f365feb,#2f365ff7),url(../images/footer.jpg);
+	padding:70px 0px;
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.fboxWrapper {
+    width: 350px;
+    color: white;
+	float:left;
+}
+.fboxContainer {
+    overflow: hidden;
+}
+.boxInner {
+    padding: 0px 15px;
+}
+.fboxWrapper .boxInner ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    margin-top: 30px;
+}
+.fboxWrapper .boxInner ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0px;
+    display: block;
+    font-size: 16px;
+}
+.fboxWrapper .boxInner ul li a i {
+    background: #1d3f66;
+    padding: 8px;
+    border-radius: 2px;
+}
+.copyright {
+    background: #192150;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+/*End Footer*/
+
+
+
+
+
